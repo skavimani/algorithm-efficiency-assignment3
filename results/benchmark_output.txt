@@ -1,0 +1,49 @@
+Part 1: Quicksort timing
+  random    n=  1000  randomized      0.91 ms   deterministic       0.78 ms
+  random    n=  2000  randomized      1.89 ms   deterministic       1.81 ms
+  random    n=  4000  randomized      4.32 ms   deterministic       3.70 ms
+  random    n=  8000  randomized      9.19 ms   deterministic       7.42 ms
+  random    n= 16000  randomized     25.00 ms   deterministic      35.11 ms
+  sorted    n=  1000  randomized      1.07 ms   deterministic      12.72 ms
+  sorted    n=  2000  randomized      2.48 ms   deterministic      48.88 ms
+  sorted    n=  4000  randomized      5.23 ms   deterministic     193.51 ms
+  sorted    n=  8000  randomized     10.94 ms   deterministic     715.86 ms
+  sorted    n= 16000  randomized     39.91 ms   deterministic    3151.43 ms
+  reverse   n=  1000  randomized      0.86 ms   deterministic      32.89 ms
+  reverse   n=  2000  randomized      1.93 ms   deterministic     193.42 ms
+  reverse   n=  4000  randomized      4.38 ms   deterministic     689.18 ms
+  reverse   n=  8000  randomized     16.33 ms   deterministic    2911.00 ms
+  reverse   n= 16000  randomized     17.35 ms   deterministic   11344.74 ms
+  repeated  n=  1000  randomized      0.26 ms   deterministic       0.17 ms
+  repeated  n=  2000  randomized      0.49 ms   deterministic       0.50 ms
+  repeated  n=  4000  randomized      0.86 ms   deterministic       0.91 ms
+  repeated  n=  8000  randomized      1.82 ms   deterministic       1.58 ms
+  repeated  n= 16000  randomized      3.37 ms   deterministic       2.60 ms
+Part 1: comparison counts vs theory
+   {'n': 100, 'mean_comparisons': 643.8, 'stdev': 60.8, 'theory_exact': 647.9, 'two_n_ln_n': 921.0}
+   {'n': 1000, 'mean_comparisons': 11004, 'stdev': 793.1, 'theory_exact': 10985.9, 'two_n_ln_n': 13815.5}
+   {'n': 10000, 'mean_comparisons': 155866.7, 'stdev': 6450.3, 'theory_exact': 155771.7, 'two_n_ln_n': 184206.8}
+   {'n': 100000, 'mean_comparisons': 1998123.5, 'stdev': 47121.1, 'theory_exact': 2018053.4, 'two_n_ln_n': 2302585.1}
+Part 2: hash table vs load factor
+  alpha= 0.25  hit   0.36 us  miss   0.31 us  longest chain 3
+  alpha= 0.50  hit   0.32 us  miss   0.30 us  longest chain 4
+  alpha= 1.00  hit   0.34 us  miss   0.34 us  longest chain 6
+  alpha= 2.00  hit   0.64 us  miss   0.55 us  longest chain 9
+  alpha= 4.00  hit   1.09 us  miss   1.20 us  longest chain 13
+  alpha= 8.00  hit   1.01 us  miss   1.41 us  longest chain 22
+  alpha=16.00  hit   1.61 us  miss   2.58 us  longest chain 36
+Part 2: dynamic resizing on vs off
+   {'resizing': 'on', 'n': 100, 'slots': 128, 'load_factor': 0.781, 'search_us': 0.315}
+   {'resizing': 'on', 'n': 1000, 'slots': 1024, 'load_factor': 0.977, 'search_us': 0.34}
+   {'resizing': 'on', 'n': 5000, 'slots': 8192, 'load_factor': 0.61, 'search_us': 0.37}
+   {'resizing': 'on', 'n': 10000, 'slots': 16384, 'load_factor': 0.61, 'search_us': 0.493}
+   {'resizing': 'on', 'n': 20000, 'slots': 32768, 'load_factor': 0.61, 'search_us': 0.621}
+   {'resizing': 'on', 'n': 50000, 'slots': 65536, 'load_factor': 0.763, 'search_us': 0.813}
+   {'resizing': 'off', 'n': 100, 'slots': 8, 'load_factor': 12.5, 'search_us': 0.488}
+   {'resizing': 'off', 'n': 1000, 'slots': 8, 'load_factor': 125.0, 'search_us': 1.961}
+   {'resizing': 'off', 'n': 5000, 'slots': 8, 'load_factor': 625.0, 'search_us': 9.079}
+   {'resizing': 'off', 'n': 10000, 'slots': 8, 'load_factor': 1250.0, 'search_us': 18.277}
+   {'resizing': 'off', 'n': 20000, 'slots': 8, 'load_factor': 2500.0, 'search_us': 50.767}
+   {'resizing': 'off', 'n': 50000, 'slots': 8, 'load_factor': 6250.0, 'search_us': 233.261}
+
+Results written to /home/claude/algorithm-efficiency/results
