@@ -84,3 +84,19 @@ t.delete("apple")                 # -> True
   50,000 keys. Without resizing (8 fixed slots) it rose to 233 µs.
 
 See `Assignment3_Report.docx` for the full analysis and discussion.
+
+## References
+
+Bentley, J. L., & McIlroy, M. D. (1993). Engineering a sort function. *Software: Practice and Experience, 23*(11), 1249–1265. https://doi.org/10.1002/spe.4380231105
+
+Carter, J. L., & Wegman, M. N. (1979). Universal classes of hash functions. *Journal of Computer and System Sciences, 18*(2), 143–154. https://doi.org/10.1016/0022-0000(79)90044-8
+
+Dietzfelbinger, M., Karlin, A., Mehlhorn, K., Meyer auf der Heide, F., Rohnert, H., & Tarjan, R. E. (1994). Dynamic perfect hashing: Upper and lower bounds. *SIAM Journal on Computing, 23*(4), 738–761. https://doi.org/10.1137/S0097539791194094
+
+Gonnet, G. H. (1981). Expected length of the longest probe sequence in hash code searching. *Journal of the ACM, 28*(2), 289–304. https://doi.org/10.1145/322248.322254
+
+Hoare, C. A. R. (1962). Quicksort. *The Computer Journal, 5*(1), 10–16. https://doi.org/10.1093/comjnl/5.1.10
+
+Larson, P.-Å. (1988). Dynamic hash tables. *Communications of the ACM, 31*(4), 446–457. https://doi.org/10.1145/42404.42410
+
+Sedgewick, R. (1977). The analysis of Quicksort programs. *Acta Informatica, 7*(4), 327–355. https://doi.org/10.1007/BF00289467
